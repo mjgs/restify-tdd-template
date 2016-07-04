@@ -1,0 +1,20 @@
+{
+  "name": "restify-tdd-template",
+  "version": "1.0.0",
+  "description": "Simple template for building apis using restify and tdd",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "mocha --reporter=nyan *.test.js"
+  },
+  "author": "Mark Smith",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^2.5.3",
+    "sinon": "^1.17.4"
+  },
+  "dependencies": {
+    "restify": "^4.1.1"
+  }
+}
