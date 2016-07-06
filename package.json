@@ -5,6 +5,7 @@
   "private": true,
   "main": "index.js",
   "scripts": {
+    "lint": "eslint .",
     "start": "node index.js",
     "test": "mocha --reporter=nyan *.test.js",
     "watch:test": "npm test -- --watch"
@@ -12,6 +13,9 @@
   "author": "Mark Smith",
   "devDependencies": {
     "chai": "^3.5.0",
+    "eslint": "^3.0.1",
+    "eslint-config-kentcdodds": "^6.2.1",
+    "eslint-plugin-mocha": "^4.0.0",
     "mocha": "^2.5.3",
     "sinon": "^1.17.4"
   },
