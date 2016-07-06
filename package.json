@@ -4,10 +4,16 @@
   "description": "Simple template for building apis using restify and tdd",
   "private": true,
   "main": "index.js",
+  "config": {
+    "ghooks": {
+      "pre-commit": "opt --in pre-commit --exec \"npm run validate\""
+    }
+  },
   "scripts": {
     "lint": "eslint .",
     "start": "node index.js",
     "test": "mocha --reporter=nyan *.test.js",
+    "validate": "npm-run-all --parallel lint test",
     "watch:test": "npm test -- --watch"
   },
   "author": "Mark Smith",
@@ -16,7 +22,9 @@
     "eslint": "^3.0.1",
     "eslint-config-kentcdodds": "^6.2.1",
     "eslint-plugin-mocha": "^4.0.0",
+    "ghooks": "^1.3.2",
     "mocha": "^2.5.3",
+    "npm-run-all": "^2.3.0",
     "sinon": "^1.17.4"
   },
   "dependencies": {
